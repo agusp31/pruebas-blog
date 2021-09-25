@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body class="container">
+    <h1>Ejemplo de calculadora</h1>
+    <form id="mi_formulario" class="was-validated" onsubmit= "dividir()">
+    <div class="form-group">  
+        <label for="">Numero 1</label>
+        <input type="number" class="form-control" id="numero1" min="0" required>
+        <div class="valid-feedback"> </div>
+        <div class="invalid-feedback">Por favor ingrese un numero mayor a 0</div>  
+    </div>
+    <div class="form-group">
+        <label for="">Numero 2</label>
+        <input type="number" id="numero2" class="form-control" min="0" required>
+        <div class="valid-feedback"> </div>
+        <div class="invalid-feedback">Por favor ingrese un numero mayor a 0</div>  
+    </div>
+    <div class="form-group">
+        <label for="">Numero 3</label>
+        <input type="number" id="numero3" class="form-control" min="0" required>
+        <div class="valid-feedback"> </div>
+        <div class="invalid-feedback">Por favor ingrese un numero mayor a 0</div>  
+    </div>
+    <input type="submit" value="calcular" class="btn-dark"> 
+    </form>
+    <script>
+        function sumar() {
+            alert("aca debe sumar");
+            let numero1=Number(document.forms["mi_formulario"] ["numero1"].value); alert("El primer numero es: " + numero1);
+            let numero2=Number(document.forms["mi_formulario"] ["numero2"].value); alert("El segundo numero es: " + numero2);
+            let total=numero1 + numero2;
+            alert("El total es: "+ total )
+        }
+        function dividir()
+        {
+            let numero1=Number(document.forms["mi_formulario"] ["numero1"].value); 
+            let numero2=Number(document.forms["mi_formulario"] ["numero2"].value); 
+            let total=0;
+            if (numero2==0){
+                alert("no se puede dividir por 0");
+            }
+            else 
+            {
+                total=numero1/numero2;
+                alert("El resultado de la division es: " + total)
+            }  
+        }
+        function mayor()
+        {
+
+        }
+         
+        
+        
+
+    </script>
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
